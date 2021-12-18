@@ -10,8 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.Features.Cars
 {
+    [ApiController]
     [Route("api/cars")]
-    public class CarsController : Controller
+    public class CarsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
@@ -57,7 +58,7 @@ namespace WebUI.Features.Cars
        
         [HttpPut]
         [Route("{id}")]
-        public ActionResult<Car> UpdateCar(int id,[FromBody]Car car)
+        public ActionResult<Car> UpdateCar(int id,Car car)
         {
             var carToUpdate = _context.Cars.FirstOrDefault(x => x.Id == id);
             if (carToUpdate == null)
