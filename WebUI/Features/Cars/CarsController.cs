@@ -33,6 +33,60 @@ namespace WebUI.Features.Cars
 
             return Ok(cars);
         }
+
+        [HttpGet]
+        [Route("{id}")]
+        public ActionResult<Car> GetCar(int id)
+        {
+            var car = new Car
+            {
+                TeamName = "Tam B",
+                Speed = 95,
+                MelFunctionChance = 0.15
+            };
+
+            return Ok(car);
+        }
+
+        //create car
+        [HttpPost]
+         public ActionResult<Car> CreateCar(Car car)
+        {
+            var newCar = new Car
+            {
+                Id = car.Id,
+                TeamName = car.TeamName,
+                Speed = car.Speed,
+                MelFunctionChance = car.MelFunctionChance
+            };
+
+            return Ok(newCar);
+        }
+
+        //update car
+        //TODO Revisar esto
+        [HttpPut]
+        [Route("{id}")]
+        public ActionResult<Car> UpdateCar(Car car)
+        {
+            var carUpdated = new Car
+            {
+                Id = car.Id,
+                TeamName = car.TeamName,
+                Speed = car.Speed,
+                MelFunctionChance = car.MelFunctionChance
+            };
+
+            return Ok(UpdateCar);
+        }
+
+        //delete car
+        [HttpDelete]
+        [Route("{id}")]
+        public ActionResult DeleteCar(int id)
+        {
+            return Ok($"Car with id {id} was succesfuly deleted");
+        }
     }
 }
 
