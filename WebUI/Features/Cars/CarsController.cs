@@ -63,11 +63,10 @@ namespace WebUI.Features.Cars
             return Ok(newCar);
         }
 
-        //update car
-        //TODO Revisar esto
+       
         [HttpPut]
         [Route("{id}")]
-        public ActionResult<Car> UpdateCar(Car car)
+        public ActionResult<Car> UpdateMotorbike(Car car)
         {
             var carUpdated = new Car
             {
@@ -77,7 +76,7 @@ namespace WebUI.Features.Cars
                 MelFunctionChance = car.MelFunctionChance
             };
 
-            return Ok(UpdateCar);
+            return Ok(carUpdated);
         }
 
         //delete car

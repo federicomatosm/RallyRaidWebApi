@@ -13,10 +13,12 @@
   <ItemGroup>
     <None Remove="Features\" />
     <None Remove="Features\Cars\" />
+    <None Remove="Features\Motorbikes\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
     <Folder Include="Features\Cars\" />
+    <Folder Include="Features\Motorbikes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
