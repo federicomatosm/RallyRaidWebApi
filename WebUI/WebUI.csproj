@@ -19,11 +19,15 @@
     <None Remove="Features\Cars\" />
     <None Remove="Features\Motorbikes\" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Features\CarRaces\" />
+    <None Remove="Features\CarRaces\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
     <Folder Include="Features\Cars\" />
     <Folder Include="Features\Motorbikes\" />
+    <Folder Include="Features\CarRaces\" />
+    <Folder Include="Features\CarRaces\Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
